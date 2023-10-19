@@ -22,7 +22,6 @@ public class PageController {
     @RequestMapping("/{page}")
     public String page(@PathVariable String page, HttpSession session){
         session.setAttribute("cuser",new CUser());
-        System.out.println("测试push");
         return page;
     }
 }
