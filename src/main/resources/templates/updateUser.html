@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title>DarkPan - Bootstrap 5 Admin Template</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="" name="keywords">
+<meta content="" name="description">
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="/css/css2.css" rel="stylesheet">
+
+<link href="/css/all.min.css" rel="stylesheet">
+<link href="/css/bootstrap-icons.css" rel="stylesheet">
+
+<link href="/css/owl.carousel.min.css" rel="stylesheet">
+<link href="/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet">
+
+<link href="/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="/css/style.css" rel="stylesheet">
+</head>
+<body>
+<div class="container-fluid position-relative d-flex p-0">
+
+<div id="spinner" class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+<div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+<span class="sr-only">Loading...</span>
+</div>
+</div>
+
+
+ <!--使用公共片段替换侧边-->
+ <div th:replace="common/cebian::cebian"></div>
+
+
+<div class="content">
+
+ <!--使用公共片段替换顶部-->
+ <nav th:replace="common/cebian::title"></nav>
+
+
+<div class="container-fluid pt-4 px-4">
+<div class="row g-4">
+
+
+<div class="col-sm-12 col-xl-6">
+<div class="bg-secondary rounded h-100 p-4">
+<h6 class="mb-4">用户信息变更</h6>
+<form th:action="@{/updateUser}">
+
+ <div class="mb-3">
+  <label for="exampleInputEmail1" class="form-label">用户编号：</label>
+  <SPAN th:text="${user.getUserId}"></SPAN>
+  <input type="hidden" name="userId" th:value="${user.getUserId}">
+ </div>
+
+ <div class="mb-3">
+  <label for="exampleInputEmail1" class="form-label">用户名</label>
+  <input type="text" class="form-control" id="upUserName" th:value="${user.getUserName}" name="userName" aria-describedby="emailHelp">
+ </div>
+
+ <div class="mb-3">
+  <label for="upPwd" class="form-label">密码</label>
+  <input type="text" class="form-control" id="upPwd" th:value="${user.getUserPwd}" name="userPwd">
+ </div>
+
+ <div class="mb-3">
+  <label for="exampleInputEmail1" class="form-label">电话号码</label>
+  <input type="text" class="form-control" id="upPhone" aria-describedby="emailHelp" th:value="${user.getUserPhone}" name="userPhone">
+ </div>
+
+<div class="mb-3">
+<label for="exampleInputEmail1" class="form-label">邮箱</label>
+<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" th:value="${user.getUserEmail}" name="userEmail">
+<div id="emailHelp" class="form-text">请填写规范的邮箱！
+</div>
+</div>
+
+ <fieldset class="row mb-3">
+  <legend class="col-form-label col-sm-2 pt-0">级别</legend>
+  <div class="col-sm-10">
+   <div class="form-check">
+    <input class="form-check-input" type="radio" id="gridRadios1" name="userGrade" value="0" th:checked="${user.getUserGrade==0 ?:'checked'}">
+    <label class="form-check-label" for="gridRadios1">
+     普通用户
+    </label>
+   </div>
+   <div class="form-check">
+    <input class="form-check-input" type="radio" id="gridRadios2" name="userGrade"  value="1" th:checked="${user.getUserGrade==1 ?: 'checked'}">
+    <label class="form-check-label" for="gridRadios2">
+     管理员
+    </label>
+   </div>
+  </div>
+ </fieldset>
+
+<button type="submit" class="btn btn-primary">修改</button>
+</form>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+
+<a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+</div>
+
+<script src="/js/jquery-3.4.1.min.js" type="47524a44f347dfd21380f287-text/javascript"></script>
+<script src="/js/bootstrap.bundle.min.js" type="47524a44f347dfd21380f287-text/javascript"></script>
+<script src="/js/chart.min.js" type="47524a44f347dfd21380f287-text/javascript"></script>
+<script src="/js/easing.min.js" type="47524a44f347dfd21380f287-text/javascript"></script>
+<script src="/js/waypoints.min.js" type="47524a44f347dfd21380f287-text/javascript"></script>
+<script src="/js/owl.carousel.min.js" type="47524a44f347dfd21380f287-text/javascript"></script>
+<script src="/js/moment.min.js" type="47524a44f347dfd21380f287-text/javascript"></script>
+<script src="/js/moment-timezone.min.js" type="47524a44f347dfd21380f287-text/javascript"></script>
+<script src="/js/tempusdominus-bootstrap-4.min.js" type="47524a44f347dfd21380f287-text/javascript"></script>
+
+<script src="/js/main.js" type="47524a44f347dfd21380f287-text/javascript"></script>
+<script src="/js/rocket-loader.min.js" data-cf-settings="47524a44f347dfd21380f287-|49" defer=""></script></body>
+</html>

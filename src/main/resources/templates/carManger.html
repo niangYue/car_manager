@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>DarkPan - Bootstrap 5 Admin Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="/css/css2.css" rel="stylesheet">
+
+    <link href="/css/all.min.css" rel="stylesheet">
+    <link href="/css/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="/css/owl.carousel.min.css" rel="stylesheet">
+    <link href="/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet">
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+<body>
+<div class="container-fluid position-relative d-flex p-0">
+
+    <div id="spinner" class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+
+
+    <!--使用公共片段替换侧边-->
+    <div th:replace="common/cebian::cebian"></div>
+
+
+    <div class="content">
+
+        <!--使用公共片段替换顶部-->
+        <nav th:replace="common/cebian::title"></nav>
+
+
+        <div class="container-fluid pt-4 px-4">
+            <div class="row g-4">
+<!--                <div class="col-sm-12 col-xl-6">-->
+<!--                    <div class="bg-secondary rounded h-100 p-4">-->
+<!--                        <h6 class="mb-4">管理员</h6>-->
+<!--                        <table class="table">-->
+<!--                            <thead>-->
+<!--&lt;!&ndash;                            第一个&ndash;&gt;-->
+<!--                            <tr>-->
+<!--                                <th scope="col">#</th>-->
+<!--                                <th scope="col">用户编号</th>-->
+<!--                                <th scope="col">用户名</th>-->
+<!--                                <th scope="col">密码</th>-->
+<!--                                <th scope="col">电话号码</th>-->
+<!--                                <th scope="col">邮箱</th>-->
+<!--                                <th scope="col">注册时间</th>-->
+<!--                            </tr>-->
+<!--                            </thead>-->
+<!--                            <tbody>-->
+<!--                            <tr>-->
+<!--                                <th scope="row">1</th>-->
+<!--                                <td>John</td>-->
+<!--                                <td>Doe</td>-->
+<!--                                <td><a href="email-protection.html" class="__cf_email__" data-cfemail="3a505255547a5f575b535614595557">[email&#160;protected]</a></td>-->
+<!--                            </tr>-->
+<!--                            <tr>-->
+<!--                                <th scope="row">2</th>-->
+<!--                                <td>Mark</td>-->
+<!--                                <td>Otto</td>-->
+<!--                                <td><a href="email-protection.html" class="__cf_email__" data-cfemail="86ebe7f4edc6e3ebe7efeaa8e5e9eb">[email&#160;protected]</a></td>-->
+<!--                            </tr>-->
+<!--                            <tr>-->
+<!--                                <th scope="row">3</th>-->
+<!--                                <td>Jacob</td>-->
+<!--                                <td>Thornton</td>-->
+<!--                                <td><a href="email-protection.html" class="__cf_email__" data-cfemail="660c0705090426">[email&#160;protected]</a>email.com</td>-->
+<!--                            </tr>-->
+<!--                            </tbody>-->
+<!--                        </table>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="col-sm-12 col-xl-6">-->
+<!--                    <div class="bg-secondary rounded h-100 p-4">-->
+<!--                        <h6 class="mb-4">普通用户</h6>-->
+<!--                        <table class="table table-striped">-->
+<!--                            <thead>-->
+<!--                            <tr>-->
+<!--                                <th scope="col">#</th>-->
+<!--                                <th scope="col">用户编号</th>-->
+<!--                                <th scope="col">用户名</th>-->
+<!--                                <th scope="col">密码</th>-->
+<!--                                <th scope="col">电话号码</th>-->
+<!--                                <th scope="col">邮箱</th>-->
+<!--                                <th scope="col">注册时间</th>-->
+<!--                            </tr>-->
+<!--                            </thead>-->
+<!--                            <tbody>-->
+<!--                            <tr>-->
+<!--                                <th scope="row">1</th>-->
+<!--                                <td>John</td>-->
+<!--                                <td>Doe</td>-->
+<!--                                <td><a href="email-protection.html" class="__cf_email__" data-cfemail="b2d8dadddcf2d7dfd3dbde9cd1dddf">[email&#160;protected]</a></td>-->
+<!--                            </tr>-->
+<!--                            <tr>-->
+<!--                                <th scope="row">2</th>-->
+<!--                                <td>Mark</td>-->
+<!--                                <td>Otto</td>-->
+<!--                                <td><a href="email-protection.html" class="__cf_email__" data-cfemail="640905160f240109050d084a070b09">[email&#160;protected]</a></td>-->
+<!--                            </tr>-->
+<!--                            <tr>-->
+<!--                                <th scope="row">3</th>-->
+<!--                                <td>Jacob</td>-->
+<!--                                <td>Thornton</td>-->
+<!--                                <td><a href="email-protection.html" class="__cf_email__" data-cfemail="d2b8b3b1bdb092b7bfb3bbbefcb1bdbf">[email&#160;protected]</a></td>-->
+<!--                            </tr>-->
+<!--                            </tbody>-->
+<!--                        </table>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+                <div class="col-12">
+                    <div class="bg-secondary rounded h-100 p-4">
+                        <h6 class="mb-4">普通用户</h6>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">用户编号</th>
+                                    <th scope="col">用户名</th>
+                                    <th scope="col">密码</th>
+                                    <th scope="col">电话号码</th>
+                                    <th scope="col">邮箱</th>
+                                    <th scope="col">注册时间</th>
+                                    <th scope="col">操作</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr th:each="user : ${cusers}" th:if="${user.getUserGrade == 0}">
+                                    <th scope="row" th:text="${user.getId}"></th>
+                                    <td th:text="${user.getUserId}"></td>
+                                    <td th:text="${user.getUserName}"></td>
+                                    <td th:text="${user.getUserPwd}"></td>
+                                    <td th:text="${user.getUserPhone}"></td>
+                                    <td th:text="${user.getUserEmail}"></td>
+                                    <td th:text="${user.getUserResTime}"></td>
+                                    <td><a th:href="@{/selectUser(userId=${user.getUserId})}">修改</a></td>
+                                    <td><a th:href="@{/deleteUser(userId=${user.getUserId})}">删除</a></td>
+                                </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="bg-secondary rounded h-100 p-4">
+                        <h6 class="mb-4">管理员</h6>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">用户编号</th>
+                                    <th scope="col">用户名</th>
+                                    <th scope="col">密码</th>
+                                    <th scope="col">电话号码</th>
+                                    <th scope="col">邮箱</th>
+                                    <th scope="col">注册时间</th>
+                                    <th scope="col">操作</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr th:each="user : ${cusers}" th:if="${user.getUserGrade == 1}">
+                                    <th scope="row" th:text="${user.getId}"></th>
+                                    <td th:text="${user.getUserId}"></td>
+                                    <td th:text="${user.getUserName}"></td>
+                                    <td th:text="${user.getUserPwd}"></td>
+                                    <td th:text="${user.getUserPhone}"></td>
+                                    <td th:text="${user.getUserEmail}"></td>
+                                    <td th:text="${user.getUserResTime}"></td>
+                                    <td><a th:href="@{/selectUser(userId=${user.getUserId})}">修改</a></td>
+                                    <td><a th:href="@{/deleteUser(userId=${user.getUserId})}">删除</a></td>
+                                </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container-fluid pt-4 px-4">
+            <div class="bg-secondary rounded-top p-4">
+                <div class="row">
+                    <div class="col-12 col-sm-6 text-center text-sm-start">
+                        Copyright &copy; 2022.Company name All rights reserved.<a target="_blank" href="https://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a>
+                    </div>
+                    <div class="col-12 col-sm-6 text-center text-sm-end">
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+</div>
+
+<script data-cfasync="false" src="/js/email-decode.min.js"></script><script src="/js/jquery-3.4.1.min.js" type="c41f3a8eab52fecccd018075-text/javascript"></script>
+<script src="/js/bootstrap.bundle.min.js" type="c41f3a8eab52fecccd018075-text/javascript"></script>
+<script src="/js/chart.min.js" type="c41f3a8eab52fecccd018075-text/javascript"></script>
+<script src="/js/easing.min.js" type="c41f3a8eab52fecccd018075-text/javascript"></script>
+<script src="/js/waypoints.min.js" type="c41f3a8eab52fecccd018075-text/javascript"></script>
+<script src="/js/owl.carousel.min.js" type="c41f3a8eab52fecccd018075-text/javascript"></script>
+<script src="/js/moment.min.js" type="c41f3a8eab52fecccd018075-text/javascript"></script>
+<script src="/js/moment-timezone.min.js" type="c41f3a8eab52fecccd018075-text/javascript"></script>
+<script src="/js/tempusdominus-bootstrap-4.min.js" type="c41f3a8eab52fecccd018075-text/javascript"></script>
+
+<script src="/js/main.js" type="c41f3a8eab52fecccd018075-text/javascript"></script>
+<script src="/js/rocket-loader.min.js" data-cf-settings="c41f3a8eab52fecccd018075-|49" defer=""></script></body>
+</html>
